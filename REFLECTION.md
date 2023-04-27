@@ -27,7 +27,7 @@ public class MyClass {
     }
 }
 ```
-#### Explaination
+#### _Explaination_
 In this example, we have a class MyClass with a private field myPrivateField. Using reflection, we are able to access and retrieve the value of this field, even though it is declared as private.
 
 First, we obtain a reference to the field using the getDeclaredField() method of the Class class. This method returns a Field object that represents the specified field of the class. We pass the name of the field as a string to this method.
