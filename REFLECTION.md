@@ -94,4 +94,55 @@ Then, we obtain a reference to the displayMessage() method of MyClass using the 
 
 Finally, we invoke the method on the object instance using the invoke() method of the Method object, passing the object instance and the String argument to the method.
 
+### Ex 4: Inspect the structure of a class and an object
+```
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
+public class MyClass {
+    private String message;
+
+    public MyClass(String message) {
+        this.message = message;
+    }
+
+    public void displayMessage() {
+        System.out.println("Message: " + message);
+    }
+
+    public static void main(String[] args) throws Exception {
+        Class<?> clazz = Class.forName("MyClass");
+        
+        // Inspect fields of the class
+        Field[] fields = clazz.getDeclaredFields();
+        System.out.println("Fields of MyClass:");
+        for (Field field : fields) {
+            System.out.println(field.getName());
+        }
+        
+        // Inspect methods of the class
+        Method[] methods = clazz.getDeclaredMethods();
+        System.out.println("Methods of MyClass:");
+        for (Method method : methods) {
+            System.out.println(method.getName());
+        }
+        
+        // Inspect fields and values of an object
+        MyClass myObj = new MyClass("Hello, World!");
+        Field messageField = clazz.getDeclaredField("message");
+        messageField.setAccessible(true);
+        Object value = messageField.get(myObj);
+        System.out.println("Value of message field in myObj: " + value);
+    }
+}
+```
+#### Explaination
+In this example, we have a class MyClass with a field message and a method displayMessage(). Using reflection, we are able to inspect the structure of the class and an object of the class at runtime.
+
+First, we obtain a reference to the Class object of MyClass using the Class.forName() method, passing the fully qualified name of the class as a string.
+
+Next, we use the getDeclaredFields() method of the Class object to obtain an array of Field objects representing the fields of the class. We iterate over this array and print the names of the fields.
+
+Then, we use the getDeclaredMethods() method of the Class object to obtain an array of Method objects representing the methods of the class. We iterate over this array and print the names of the methods.
+
+Finally, we create an instance of MyClass and use the getDeclaredField() method of the Class object to obtain a Field object representing the message field of the class. We call the setAccessible() method of the Field object to make it accessible, and then use the get() method of the Field object to obtain the value of the message field in the object instance. We print the value of the field.
