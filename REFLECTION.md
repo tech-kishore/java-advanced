@@ -29,7 +29,6 @@ Next, we need to make the field accessible, since it is private. We do this by c
 
 Finally, we can retrieve the value of the field using the get() method of the Field class. We pass the object instance of MyClass as the argument to this method, since the field is an instance field and not a static field.
 
-
 ### Ex 2: Create objects dynamically
 ```
 import java.lang.reflect.Constructor;
@@ -64,5 +63,35 @@ Next, we obtain a reference to the constructor of MyClass that takes a String pa
 Then, we use the newInstance() method of the Constructor class to create a new instance of MyClass, passing the String argument to the constructor. This method returns an Object reference to the new instance.
 
 Finally, we cast the Object reference to MyClass and call the displayMessage() method on the new instance to display the message "Hello, World!".
+
+
+### Ex 3: Invoke a method dynamically
+```
+import java.lang.reflect.Method;
+
+public class MyClass {
+    public void displayMessage(String message) {
+        System.out.println("Message: " + message);
+    }
+
+    public static void main(String[] args) throws Exception {
+        Class<?> clazz = Class.forName("MyClass");
+        Object obj = clazz.newInstance();
+        Method method = clazz.getMethod("displayMessage", String.class);
+        method.invoke(obj, "Hello, World!"); // Output: Message: Hello, World!
+    }
+}
+
+```
+#### Explaination
+In this example, we have a class MyClass with a method displayMessage() that takes a String parameter. Using reflection, we are able to invoke this method dynamically at runtime.
+
+First, we obtain a reference to the Class object of MyClass using the Class.forName() method, passing the fully qualified name of the class as a string.
+
+Next, we create a new instance of MyClass using the newInstance() method of the Class object, which returns an Object reference to the new instance.
+
+Then, we obtain a reference to the displayMessage() method of MyClass using the getMethod() method of the Class object. We pass the name of the method as a string and the Class object of the String parameter as arguments to this method.
+
+Finally, we invoke the method on the object instance using the invoke() method of the Method object, passing the object instance and the String argument to the method.
 
 
