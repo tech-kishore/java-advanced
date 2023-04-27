@@ -2,6 +2,13 @@
 
 Reflection is a powerful feature in Java that allows you to examine and modify the behavior of Java objects at runtime. It allows you to inspect the structure and behavior of classes, interfaces, and objects, and also to invoke methods, access fields, and create new instances of classes dynamically.
 
+## What can be done
+
+- Access a private field of a class
+- Create objects dynamically at runtime
+- Invoke a method dynamically at runtime
+- Inspect the structure of a class and an object
+
 ## Examples of how to use reflection 
 
 ### Ex 1: Access a private field of a class
