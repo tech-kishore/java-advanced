@@ -60,7 +60,7 @@ public class MyClass {
     }
 }
 ```
-#### Explaination
+#### _Explaination_
 In this example, we have a class MyClass with a constructor that takes a String parameter. Using reflection, we are able to create an instance of this class dynamically at runtime.
 
 First, we obtain a reference to the Class object of MyClass using the Class.forName() method, passing the fully qualified name of the class as a string.
@@ -90,7 +90,7 @@ public class MyClass {
 }
 
 ```
-#### Explaination
+#### _Explaination_
 In this example, we have a class MyClass with a method displayMessage() that takes a String parameter. Using reflection, we are able to invoke this method dynamically at runtime.
 
 First, we obtain a reference to the Class object of MyClass using the Class.forName() method, passing the fully qualified name of the class as a string.
@@ -143,7 +143,7 @@ public class MyClass {
     }
 }
 ```
-#### Explaination
+#### _Explaination_
 In this example, we have a class MyClass with a field message and a method displayMessage(). Using reflection, we are able to inspect the structure of the class and an object of the class at runtime.
 
 First, we obtain a reference to the Class object of MyClass using the Class.forName() method, passing the fully qualified name of the class as a string.
