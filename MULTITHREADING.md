@@ -46,3 +46,12 @@
 
 > **Techniques** 
 >  1. wait and notify
+
+**Concurrency utilities:** 
+> Java provides a number of built-in concurrency utilities such as
+> - Executors,
+> - Locks, and
+> - Condition Variables. 
+
+> **Techniques** 
+>  1. wait and notify
