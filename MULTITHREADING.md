@@ -54,21 +54,24 @@
 > - Condition Variables. 
 
 **Thread safety in collections:** 
-> Java provides several thread-safe collection classes that can be used in multithreaded environments.
-> 1. Vector: This is a thread-safe implementation of a dynamic array, where elements can be added or removed from the end of the array.
-> 1. Hashtable: This is a thread-safe implementation of a key-value map, where each key is associated with a value.
-> 1. ConcurrentHashMap: This is a thread-safe implementation of a key-value map, where multiple threads can read or modify the map concurrently, without the need for synchronization.
-> 1. CopyOnWriteArrayList: This is a thread-safe implementation of a dynamic array, where all write operations create a new copy of the underlying array, ensuring that reads are not affected by writes.
-> 1. ConcurrentLinkedQueue: This is a thread-safe implementation of a queue, where elements can be added or removed in a non-blocking manner, allowing multiple threads to access the queue concurrently.
-> 1. BlockingQueue: This is an interface that defines a queue that supports blocking operations, where a thread can wait for an element to be added or removed from the queue.
-> 1. BlockingDeque: This is an interface that defines a double-ended queue that supports blocking operations, where a thread can wait for an element to be added or removed from either end of the queue.
-> 1. Stack: This is a thread-safe implementation of a last-in-first-out (LIFO) stack.
-> 1. PriorityQueue: This is a thread-safe implementation of a priority queue, where elements are ordered according to a comparator.
-> 1. LinkedBlockingQueue: This is a thread-safe implementation of a queue, where elements are stored in a linked list and access is controlled by a mutex.
-> 1. ArrayBlockingQueue: This is a thread-safe implementation of a bounded queue, where the capacity is fixed and access is controlled by a mutex.
-> 1. ConcurrentSkipListMap: This is a thread-safe implementation of a sorted map, based on a skip list data structure.
-> 1. ConcurrentSkipListSet: This is a thread-safe implementation of a sorted set, based on a skip list data structure.
-> 1. ConcurrentLinkedDeque: This is a thread-safe implementation of a double-ended queue, based on a linked list data structure.
+Java provides several thread-safe collection classes that can be used in multithreaded environments.
+
+1. **Vector:** This is a thread-safe implementation of a dynamic array, where elements can be added or removed from the end of the array.
+2. **Hashtable:** This is a thread-safe implementation of a key-value map, where each key is associated with a value.
+3. **Properties:** This is a thread-safe implementation of a key-value map, where the keys and values are strings.
+4. **ConcurrentHashMap:** This is a thread-safe implementation of a key-value map, where multiple threads can read or modify the map concurrently, without the need for synchronization.
+5. **CopyOnWriteArrayList:** This is a thread-safe implementation of a dynamic array, where all write operations create a new copy of the underlying array, ensuring that reads are not affected by writes.
+6. **CopyOnWriteArraySet:** This is a thread-safe implementation of a set, where all write operations create a new copy of the underlying array, ensuring that reads are not affected by writes.
+7. **ConcurrentLinkedQueue:** This is a thread-safe implementation of a queue, where elements can be added or removed in a non-blocking manner, allowing multiple threads to access the queue concurrently.
+8. **BlockingQueue:** This is an interface that defines a queue that supports blocking operations, where a thread can wait for an element to be added or removed from the queue.
+9. **BlockingDeque:** This is an interface that defines a double-ended queue that supports blocking operations, where a thread can wait for an element to be added or removed from either end of the queue.
+10. **Stack:** This is a thread-safe implementation of a last-in-first-out (LIFO) stack.
+11. **PriorityQueue:** This is a thread-safe implementation of a priority queue, where elements are ordered according to a comparator.
+12. **LinkedBlockingQueue:** This is a thread-safe implementation of a queue, where elements are stored in a linked list and access is controlled by a mutex.
+13. **ArrayBlockingQueue:** This is a thread-safe implementation of a bounded queue, where the capacity is fixed and access is controlled by a mutex.
+14. **ConcurrentSkipListMap:** This is a thread-safe implementation of a sorted map, based on a skip list data structure.
+15. **ConcurrentSkipListSet:** This is a thread-safe implementation of a sorted set, based on a skip list data structure.
+16. **ConcurrentLinkedDeque:** This is a thread-safe implementation of a double-ended queue, based on a linked list data structure.
 
 
 
